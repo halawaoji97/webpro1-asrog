@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <title>AsRog | Home</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="app-bar">
+        <div class="container">
+            <div class="brand">
+                <h1>AsRog</h1>
+            </div>
+            <a id="menu" class="hamburger">☰</a>
+            <nav id="drawer" class="nav_menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Location</a></li>
+                    <li class="nav-item"><a href="#">About us</a></li>
+                    <li class="nav-item"><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- akhir header -->
+
+    <!-- hero -->
+        <section class="hero">
+            <div class="container-hero">
+                <div class="text-hero">
+                    <h1>The best place <br> to stay is right here</h1>
+                    <p>Are you looking for a place that is cheap, <br>
+                        complete and comfortable? <br>
+                        do not worry we have provided it for you
+                    </p>
+                    <button type="button">
+                        Show Me
+                    </button>
+                </div>
+                <div class="image-hero">
+                    <img src="./assets/images/hero.jpg" alt="AsRog">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </section>
+    <!-- hero -->
+
+    <main>
+        <section class="most-popular">
+            <h2>Most Popular Choice</h2>
+            <div class="list-item">
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/pict2.jpg" alt="kelapa gading dorm">
+                        <div class="overlay-img"></div>
+                    </div>
+                    <div class="location">
+                        <h3>Kelapa Gading</h3>
+                        <p>IDR. 600.000 per room</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/pict1.jpg" alt="kelapa gading dorm">
+                        <div class="overlay-img"></div>
+                    </div>
+                    <div class="location">
+                        <h3>Kelapa Gading</h3>
+                        <p>IDR. 600.000 per room</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/pict2.jpg" alt="kelapa gading dorm">
+                        <div class="overlay-img"></div>
+                    </div>
+                    <div class="location">
+                        <h3>Kelapa Gading</h3>
+                        <p>IDR. 600.000 per room</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/pict3.jpg" alt="kelapa gading dorm">
+                        <div class="overlay-img"></div>
+                    </div>
+                    <div class="location">
+                        <h3>Kelapa Gading</h3>
+                        <p>IDR. 600.000 per room</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-map">
+            <h2>Explore Us</h2>
+            <p>You can also search by location</p>
+            <div class="list-item">
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/map1.PNG" alt="kelapa gading dorm">
+                        <div class="overlay-img">
+                            Kelapa Gading
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/map1.PNG" alt="kelapa gading dorm">
+                        <div class="overlay-img">
+                            Cipinang
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/map1.PNG" alt="kelapa gading dorm">
+                        <div class="overlay-img">
+                            Kalimalang
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img-item">
+                        <img src="./assets/images/map1.PNG" alt="kelapa gading dorm">
+                        <div class="overlay-img">
+                            Sunter
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="list-footer">
+            <div class="brand">
+                <h1>AsRog</h1>
+            </div>
+            <ul>
+                <li><a href="#">Developer</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms & condition</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+           <p> Copyright &copy; 2021 - All right reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('#menu');
+        const drawer = document.querySelector('#drawer');
+        const main = document.querySelector('main');
+        const navList = document.querySelector('.nav-list');
+
+        const clickHumburger = ()=>{
+            hamburger.classList.toggle('clickHumburger');
+        }
+        hamburger.addEventListener('click',(e)=>{
+            drawer.classList.toggle('open');
+            clickHumburger();
+            e.stopPropagation()
+        })
+        main.addEventListener('click',()=>{
+            drawer.classList.remove('open');
+            clickHumburger();
+        })
+        navList.addEventListener('click',()=>{
+            drawer.classList.remove('open');
+            clickHumburger();
+        })
+
+    </script>
+</body>
+</html>
